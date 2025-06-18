@@ -1,0 +1,202 @@
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 80%; */
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .navbar .logo {
+    width: 240px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-weight: 550;
+    color: #006404;
+  }
+  
+  .navbar-menu li {
+    cursor: pointer;
+  }
+  
+  .navbar-menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #006a04;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login {
+    background-color: #006a04;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login:hover {
+    background-color: #004d03;
+    transform: scale(1.05);
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #006a04;
+  }
+  
+  /* Profile Dropdown */
+  .profile-dropdown {
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    border: 1px solid #006a04;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
+    z-index: 10;
+  }
+  
+  .profile-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .profile-dropdown li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Search */
+   
+  .search-form {
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 5px 10px 3px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .search-button {
+    background-color: #006a04;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #004d03;
+  }
+  
+   .navbar i {
+    margin-right: 8px;
+  }
+
+  /* Media Query for Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+      gap: 10px;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      text-align: left;
+      width: 100%;
+      padding: 10px 20px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .navbar .logo {
+      width: 150px;
+    }
+  
+    .search-container {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .search-form {
+      max-width: 90%;
+    }
+  }
+
+  button{
+    background-color: #006a04;
+  }
+  
+  .navbar-right .btn {
+    position: relative;
+  }
+  
+  /* Style for the dot when it's showing a count */
+  .navbar-right .btn .dot {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background-color: #e00d0d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the count number */
+  .navbar-right .btn .cart-count {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+  }
